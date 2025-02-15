@@ -13,7 +13,7 @@ export default defineConfig({
     specPattern: 'src/**/*.cy.tsx',
   },
   e2e: {
-    baseUrl: env.VITE_CYPRESS_BASE_URL || "http://localhost:5174", // Usa el valor de entorno o un valor por defecto
+    baseUrl : "http://localhost:5174", // Usa el valor de entorno o un valor por defecto
     supportFile: false,
 
     // Record screenshots and videos
