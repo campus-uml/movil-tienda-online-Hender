@@ -1,23 +1,8 @@
-import { defineConfig } from 'cypress';
-import { loadEnv } from 'vite';
+const { defineConfig } = require('cypress')
 
-const env = loadEnv("", process.cwd(), "VITE_");
-
-export default defineConfig({
-  projectId: "fxatur", // Usa el valor de entorno o un valor por defecto
-  component: {
-    devServer: {
-      framework: "react",
-      bundler: "vite",
-    },
-    specPattern: 'src/**/*.cy.tsx',
-  },
+module.exports = defineConfig({
+  projectId: "fxatur",
   e2e: {
-    baseUrl : "http://localhost:5174", // Usa el valor de entorno o un valor por defecto
-    supportFile: false,
-
-    // Record screenshots and videos
-    video: true,
-    videoCompression: 32,
+    baseUrl: 'http://localhost:5174',
   },
-});
+})
